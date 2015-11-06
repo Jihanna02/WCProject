@@ -1,0 +1,238 @@
+/* layout/positioning */
+
+body {
+	margin: 0;
+	color: white;
+
+}
+
+.container {
+	width: 100%;
+	background-color: #060606;
+}
+
+header {
+	background-image: url('img/skyline.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+    height: 600px;
+
+}
+
+.clear {
+	clear: both;
+}
+
+.hide {
+	display: none;
+} 
+
+.parallax-window {
+    min-height: 400px;
+    background-image: url('img/scans/furst-sketch-210409-1.jpg')
+}
+
+/* navigation elements */
+
+
+ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+nav ul li a {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	text-decoration: none;
+	font-size: 30px;
+}
+
+/* navsplash = active
+	navsplashout = inactive
+*/
+.navsplash { 
+	padding: 75px;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: block;
+}
+
+.navsplashlogo {
+	width: 500px;
+	display: block;
+	margin: 0 auto;
+}
+
+/* navsticky = active
+	navstickyout = inactive */
+
+.navsticky {
+	height: 85px;
+	width: 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: -1000px;
+	transition: all .4s ease-in-out;
+ 	bottom: auto;
+}
+
+.in {
+  top: 0px;
+  position:fixed;
+}
+
+.out {
+	display: none;
+}
+
+.navstickylogo {
+	height: 60px;
+	float: left;
+	padding: 10px;
+}
+
+.stickylink {
+	float: left;
+	padding: 1%;
+	width: 18%;
+	height: 125px;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+/* section-specific classes */
+
+/* contact section*/
+.contactform {
+	display: block;
+	margin: 0 auto;
+}
+
+/* about section*/
+.about, .ceo, .holdings, .philanthropy {
+	padding: 0 10%;
+	margin: 0 auto;
+}
+
+.blurb {
+	width: 30%;
+	float: left;
+	font-size: 16px;
+}
+
+.history {
+	width: 70%;
+	font-size: 12px;
+	float: left;
+}
+
+.round {
+	float: left;
+	width: 300px;
+}
+
+/* holdings section*/
+
+.holdings {
+	background-color: transparent;
+	font-size: 16px;
+}
+
+.subside {
+	background-color: red;
+	margin: 0 auto;
+	font-size: 14px;
+	width: 20%;
+	float: left;
+	min-height: 300px;
+}
+
+.subdis {
+	width: 70%;
+	float: left;
+	padding: 5%;
+	background-color: gray;
+	min-height: 300px;
+}
+
+.subside ul li a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+
+/* philanthropy section*/
+
+.philanthropy {
+	background-color: transparent;
+	font-size: 16px;
+}
+
+.waynef {
+	width: 100%;
+}
+
+.twaynef {
+ 	width: 50%;
+ 	float: left;
+}
+
+.mwaynef {
+	width: 50%;
+	float: left;
+
+}
+
+/* text elements */
+.ceo {
+	margin-bottom: 150px;
+}
+/* text elements */
+
+p {
+	text-align: justify;
+	margin: 0;
+	padding: 10px;
+	font-family: tahoma, sans-serif;
+	
+}
+
+h1 {
+	margin: 0;
+	padding-top: 85px;
+	text-align: center;
+	font-family: Rockwell;
+	font-size: 50px;
+	letter-spacing: -5px;
+	text-transform: uppercase;
+	/* opacity: 0.5; */
+}
+
+
+blockquote {
+	display: block;
+	text-align: center;
+	font-family: font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	font-weight: 300;
+	font-size: 14px;
+	margin: 0;
+}
+
+a:link, a:visited {
+	color: blue;
+}
+
+.subdis {
+ 	
+/* transition: all 1s ease-in-out; */
+
+  transition-property: height;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    height: auto; 
+
+}
