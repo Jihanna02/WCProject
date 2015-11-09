@@ -8,7 +8,7 @@ body {
 
 .container {
 	width: 100%;
-	background-color: #060606;
+
 }
 
 header {
@@ -28,11 +28,21 @@ header {
 	display: none;
 } 
 
-.parallax-window {
-    min-height: 400px;
-    background-image: url('img/scans/furst-sketch-210409-1.jpg')
+.parallax-window1 {
+  min-height: 800px;
+  background: transparent;
 }
 
+.parallax-window2 {
+  min-height: 900px;
+	background: transparent;
+}
+
+footer {
+	padding: 10% ;
+	margin: 0 auto;
+	background-color: #060606;
+}
 /* navigation elements */
 
 
@@ -41,12 +51,15 @@ ul {
 	margin: 0;
 }
 
-nav ul li a {
+nav ul li a, nav ul li a:visited {
 	display: block;
 	text-align: center;
 	margin: 0 auto;
 	text-decoration: none;
 	font-size: 30px;
+	color: blue;
+}
+
 }
 
 /* navsplash = active
@@ -75,6 +88,7 @@ nav ul li a {
 	top: -1000px;
 	transition: all .4s ease-in-out;
  	bottom: auto;
+ 	text-transform: uppercase;
 }
 
 .in {
@@ -99,6 +113,7 @@ nav ul li a {
 	height: 125px;
 	font-size: 30px;
 	text-decoration: none;
+	color: blue;
 }
 
 /* section-specific classes */
@@ -106,41 +121,79 @@ nav ul li a {
 /* contact section*/
 .contactform {
 	display: block;
-	margin: 0 auto;
+	background-image: url("img/scans/furst-sketch-210409.jpg");
+
+	-moz-border-radius:25px;  /* for Firefox */
+	-webkit-border-radius:25px; /* for Webkit-Browsers */
+	border-radius:25px; /* regular */
+	
+}
+
+.contact {
+	padding: 0 10%;
+	margin: 0;
+	background-color: #060606;
+}
+
+form.contactform {
+    padding: 5% 10%;
 }
 
 /* about section*/
 .about, .ceo, .holdings, .philanthropy {
-	padding: 0 10%;
+	padding: 0 10% 150px 10%;
 	margin: 0 auto;
+	background-color: #060606;
 }
 
 .blurb {
-	width: 30%;
-	float: left;
-	font-size: 16px;
+	width: 100%;
+	font-size: 14px;
+	padding-bottom: 50px;
 }
 
-.history {
+/* .history {
 	width: 70%;
 	font-size: 12px;
 	float: left;
+} */
+
+.history {
+	padding-bottom: 20px;
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+     text-align: justify;
+     background-color: 
+     background: -webkit-linear-gradient(top, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
 }
 
 .round {
-	float: left;
-	width: 300px;
+ width: 15%; height: auto;
+  min-width: 150px;
+  float: left;
+  margin-right:2rem; 
+  border-radius: 50%;
+  -webkit-shape-outside:circle();
+  shape-outside:circle();
 }
 
+.aboutold {
+	float: right;
+	width: 400px;
+}
 /* holdings section*/
 
 .holdings {
-	background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.5);
 	font-size: 16px;
 }
 
 .subside {
-	background-color: red;
+	background-color: rgba(0, 0, 0, 0.8);
 	margin: 0 auto;
 	font-size: 14px;
 	width: 20%;
@@ -148,55 +201,87 @@ nav ul li a {
 	min-height: 300px;
 }
 
-.subdis {
+.subdisplay {
 	width: 70%;
 	float: left;
-	padding: 5%;
-	background-color: gray;
+	padding: 2%;
+	background-color: rgba(0, 0, 0, 0.8);
 	min-height: 300px;
 }
 
-.subside ul li a {
+.subside ul li {
 	display: block;
-	padding: 10px;
+	padding: 10px 20px;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: sans-serif;
+	border-left: 5px solid blue;
 }
 
+.subside ul li:hover {
+	background-color: blue;
+	border-left: 5px solid yellow;
+}
+
+.subdisplay a {
+	color: yellow;
+	text-decoration: none;
+}
+
+.subdisplay a:hover {
+	border-bottom: 2px solid white;
+	text-transform: uppercase;
+}
 /* philanthropy section*/
 
 .philanthropy {
-	background-color: transparent;
 	font-size: 16px;
+	min-height: 500px;
+
 }
 
 .waynef {
 	width: 100%;
+
 }
 
 .twaynef {
  	width: 50%;
  	float: left;
+ 	background-color: rgba(0, 0, 255, 0.3);
+}
+
+.twaynef h2 {
+	background-color: blue;
+	margin: 0;
+	text-align: center;
+
 }
 
 .mwaynef {
 	width: 50%;
 	float: left;
+	background-color: rgba(255, 255, 0, 0.3);
 
 }
 
-/* text elements */
+ .mwaynef h2 {
+ 	background-color: yellow;
+ 	margin: 0;
+	text-align: center;
+ }
+
+/* text elements
 .ceo {
 	margin-bottom: 150px;
-}
+	
+}  */
 /* text elements */
 
 p {
 	text-align: justify;
 	margin: 0;
 	padding: 10px;
-	font-family: tahoma, sans-serif;
 	
 }
 
@@ -220,19 +305,18 @@ blockquote {
 	font-weight: 300;
 	font-size: 14px;
 	margin: 0;
+	
 }
 
-a:link, a:visited {
-	color: blue;
-}
-
-.subdis {
- 	
-/* transition: all 1s ease-in-out; */
-
-  transition-property: height;
-    transition-duration: 2s;
-    transition-timing-function: linear;
-    height: auto; 
-
+#ceo {
+ border-radius: 0px 0px 200px 200px;
+ -moz-border-radius: 0px 0px 200px 200px;
+ -webkit-border-radius: 0px 0px 200px 200px;
+ border: 0;
+ background-color: #060606;
+ padding: 50px;
+ margin-top: -30px;
+-webkit-box-shadow: 10px 10px 7px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 7px -9px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 7px -9px rgba(0,0,0,0.75);
 }
