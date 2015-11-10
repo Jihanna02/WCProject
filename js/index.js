@@ -24,6 +24,23 @@ $('.parallax-window1').parallax({imageSrc: 'img/scans/Oldgotham-32.jpg'});
 
 $('.parallax-window2').parallax({imageSrc: 'img/scans/Oldgotham-4.jpg'});
 
+// read more links
+ $(".history").addClass("hide");
+	$("button").click(function(){
+        $(".history").toggleClass("hide");
+    });
+
+ $(".twaynefp").addClass("hide");
+  $(".history").addClass("hide");
+	$(".twaynefh").click(function(){
+        $(".twaynefp").toggleClass("hide");
+    });
+
+ $(".mwaynefp").addClass("hide");
+  $(".history").addClass("hide");
+	$(".mwaynefh").click(function(){
+        $(".mwaynefp").toggleClass("hide");
+    });
 
 //menu for "holdings" section
 
@@ -124,5 +141,36 @@ $('.parallax-window2').parallax({imageSrc: 'img/scans/Oldgotham-4.jpg'});
 	  	$('#steel').slideDown(600); 
 
 	  })
+
+ // contact form
+
+ $("form").on("submit", function(e){
+    e.preventDefault();
+
+    var fullName = $("input[name='name']").val();
+    var email = $("input[name='email']").val();
+    var subject = $("select[name='subject']").val();
+    var message = $("textarea[name='message']").val();
+
+    var data = {
+      userName: fullName,
+      userEmailAddress: email,
+      userSubject: subject,
+      userMessage: message
+    }
+    console.log(data);
+  });
 });
+
+//mobile toggle
+	 // $("#batmaninc").addClass("hide");
+
+	$("#lbat2").click(function(){
+        $("#batmaninc2").toggleClass("hide");
+    });
+
+
+	$("#laero2").click(function(){
+        $("#aerospace2").toggleClass("hide");
+    });
 
